@@ -1,9 +1,7 @@
 import praw
 
 reddit = praw.Reddit('bot1')
-subreddit = reddit.subreddit("learnpython")
-print(reddit)
-print(subreddit)
+subreddit = reddit.subreddit("Covid")
 
 for submission in subreddit.hot(limit=5):
     print("Title: ", submission.title)
