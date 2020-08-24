@@ -2,6 +2,7 @@ import praw
 import pdb
 import re
 import os
+import requests
 
 reddit = praw.Reddit('bot1')
 
