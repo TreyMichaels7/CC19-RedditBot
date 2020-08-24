@@ -49,7 +49,7 @@ for submission in subreddit.hot(limit=10):
 
         # Prints the stats of the top 5 counties currently being impacted by Covid-19. 
         if re.search("CoverCovid !TopCounties", submission.title, re.IGNORECASE):
-            submission.reply("Nigerian scammer bot says: It's all about the Bass (and Python)")
+            submission.reply("Click [here](https://covercovid-19.com) to view an interactive map of US Covid-19 statistics or to report that you feel unwell and suspect having Covid-19.")
             print("Bot replying to : ", submission.title)
             posts_replied_to.append(submission.id)
 
