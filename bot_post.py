@@ -40,17 +40,23 @@ for submission in subreddit.hot(limit=10):
 
             # Print the Bot Summary and Command List
             if re.search("CoverCovid !Help", comment.body, re.IGNORECASE):
-                body = '''
-                I am a bot for **CoverCovid-19** which tracks Covid-19 cases in the **United States**. I cover cases on both a local (self-reported) and county level (officially reported). I can also provide links to the official CoverCovid-19 Covid-19 map.  
-      
-                ---
-                **CoverCovid !Help** - Prints the bot summary and command list
-                **CoverCovid !Total** - Prints the current approximate total of cases in the US.
-                **CoverCovid !TopCounties** - Prints the stats of the top 5 counties currently being impacted by Covid-19.
-                **CoverCovid !Map** - Provides a link to the CoverCovid-19 Covid Tracker map for viewing or self-reporting.
-                **CoverCovid !Map CountyName** - Provides a link to the CoverCovid-19 map centered on the provided county, if it exists. If the county does not exist, then it will provide a link to the map with its default view.
-                **CoverCovid !StateMap** - Provides a link to the official CDC map for US state Covid-19 stats.
-                '''
+                body = """
+I am a bot for **CoverCovid-19** which tracks Covid-19 cases in the **United States**. I cover cases on both a local (self-reported) and county level (officially reported). I can also provide links to the official CoverCovid-19 Covid-19 map.
+
+---
+
+**CoverCovid !Help** \- Prints the bot summary and command list
+
+**CoverCovid !Total** \- Prints the current approximate total of cases in the US.
+
+**CoverCovid !TopCounties** \- Prints the stats of the top 5 counties currently being impacted by Covid-19.  
+
+**CoverCovid !Map** \- Provides a link to the CoverCovid-19 Covid Tracker map for viewing or self-reporting.  
+
+**CoverCovid !Map CountyName** \- Provides a link to the CoverCovid-19 map centered on the provided county, if it exists. If the county does not exist, then it will provide a link to the map with its default view.  
+
+**CoverCovid !StateMap** \- Provides a link to the official CDC map for US state Covid-19 stats.
+                """
                 comment.reply(body)
                 print("Bot replying to : ", comment.author)
                 posts_replied_to.append(comment.id)
