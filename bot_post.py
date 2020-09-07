@@ -6,8 +6,6 @@ import requests
 
 reddit = praw.Reddit('bot1')
 
-## reddit.login("CoverCovid", "Tyxc0614")
-
 if not os.path.isfile("posts_replied_to.txt"):
     posts_replied_to = []
 
@@ -18,7 +16,7 @@ else:
         posts_replied_to = list(filter(None, posts_replied_to))
 
 # Get the top 5 values from our subreddit
-subreddit = reddit.subreddit('pythonforengineers')
+subreddit = reddit.subreddit('Coronavirus')
 # Check each submission in the subreddit
 for submission in subreddit.hot(limit=10):
     # Check each comment for each submission
